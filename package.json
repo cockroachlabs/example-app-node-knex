@@ -1,0 +1,19 @@
+{
+  "name": "example-app-node-knex",
+  "version": "1.0.0",
+  "scripts": {
+    "db:start": "docker-compose -p example-project -f docker-compose-dev.yml up --build -d cockroachdb && docker-compose -p example-project -f docker-compose-dev.yml up waitcockroachdb",
+    "db:stop": "docker-compose -p example-project -f docker-compose-dev.yml down",
+    "format": "prettier --write app.js",
+    "run": "node app.js"
+  },
+  "dependencies": {
+    "knex": "^0.95.12",
+    "pg": "^8.7.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.4.1"
+  },
+  "type": "module"
+}
