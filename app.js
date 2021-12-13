@@ -5,7 +5,7 @@ const config = {
   connection: {
     user: "root",
     password: "",
-    database: "bank",
+    database: "defaultdb",
     host: "localhost",
     port: 26257,
     ssl: false,
