@@ -2,21 +2,14 @@ import Knex from "knex";
 
 const config = {
   client: "cockroachdb",
-  connection: {
-    user: "root",
-    password: "",
-    database: "defaultdb",
-    host: "localhost",
-    port: 26257,
-    ssl: false,
-  },
+  connection: process.env.DATABASE_URL,
   migrations: {
     directory: "migration/migrations",
   },
   seeds: {
     directory: "migration/seeds",
   },
-};
+}
 
 // Connect to database
 const client = Knex(config);

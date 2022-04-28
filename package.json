@@ -8,7 +8,7 @@
     "run": "node app.js"
   },
   "dependencies": {
-    "knex": "^0.95.12",
+    "knex": "^0.95.14",
     "pg": "^8.7.1",
     "uuid": "^8.3.2"
   },
