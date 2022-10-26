@@ -2,7 +2,7 @@ import Knex from "knex";
 
 const config = {
   client: "cockroachdb",
-  connection: process.env.DATABASE_URL,
+  connection: process.env.DATABASE_URL + "&application_name=docs_simplecrud_knex",
   migrations: {
     directory: "migration/migrations",
   },
