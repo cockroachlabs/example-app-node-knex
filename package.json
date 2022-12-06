@@ -5,7 +5,7 @@
     "db:start": "docker-compose -p example-project -f docker-compose-dev.yml up --build -d cockroachdb && docker-compose -p example-project -f docker-compose-dev.yml up waitcockroachdb",
     "db:stop": "docker-compose -p example-project -f docker-compose-dev.yml down",
     "format": "prettier --write app.js",
-    "run": "node app.js"
+    "start": "node app.js"
   },
   "dependencies": {
     "knex": "^0.95.14",
