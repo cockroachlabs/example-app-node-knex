@@ -131,7 +131,7 @@ async function deleteAccounts(client, transaction) {
 (async () => {
   // Initialize table in transaction retry wrapper
   console.log("Initializing accounts table...");
-  await retryTxn(0, 15, client, initTable);
+  await initTable(client);
 
   // Transfer funds in transaction retry wrapper
   console.log("Transferring funds...");
