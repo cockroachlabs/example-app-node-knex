@@ -129,7 +129,12 @@ async function deleteAccounts(client, transaction) {
 
 // Run the transactions in the connection pool
 (async () => {
-  // Initialize table in transaction retry wrapper
+  // Prevent knex migration framework from running
+  // schema changes in a transaction
+  await client.raw("SET autocommit_before_ddl = true");
+
+  // Initialize table in without using a transaction,
+  // since it involves schema changes.
   console.log("Initializing accounts table...");
   await initTable(client);
 
